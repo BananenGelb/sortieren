@@ -7,5 +7,15 @@ package bubblesort
 func BubbleUp(list []int) bool {
 	swapped := false
 	// TODO
+
+	for i := 0; i < len(list)-1; i++ {
+		if list[i] > list[i+1] {
+			k := list[i+1]
+			swapped = true
+			list[i+1] = list[i]
+			list[i] = k
+		}
+
+	}
 	return swapped
 }
